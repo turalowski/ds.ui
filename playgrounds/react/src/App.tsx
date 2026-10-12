@@ -1,41 +1,54 @@
-import React, { useState } from 'react';
-import { Typography, Input, Button, Margin } from '@ds.ui/react';
+import React from 'react';
+import { Typography } from '@ds.ui/react';
+import Colors from './showcase/Colors';
+import TypographyScale from './showcase/TypographyScale';
+import SpacingScale from './showcase/SpacingScale';
+import Components from './showcase/Components';
 
-const App = () => {
-  const [email, setEmail] = useState('');
-  const [submitted, setSubmitted] = useState(false);
+const sections = [
+  { id: 'colors', label: 'Colors' },
+  { id: 'typography', label: 'Typography' },
+  { id: 'spacing', label: 'Spacing' },
+  { id: 'components', label: 'Components' },
+];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
+const storybookUrl = import.meta.env.VITE_STORYBOOK_URL ?? 'http://localhost:6006';
 
-  return (
-    <div className="ds-margin-md ds-width-xl">
-      <Margin top bottom space="lg">
-        <Typography>Welcome to Design System</Typography>
-      </Margin>
+const App = () => (
+  <div className="showcase">
+    <header className="showcase-header">
+      <div className="showcase-container showcase-header-inner">
+        <Typography variant="h1">ds.ui</Typography>
+        <div className="showcase-header-actions">
+          <nav aria-label="Sections">
+            <ul className="showcase-nav">
+              {sections.map(section => (
+                <li key={section.id}>
+                  <a href={`#${section.id}`}>{section.label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <a
+            className="ds-button ds-button-primary showcase-storybook-link"
+            href={storybookUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open Storybook
+            <span className="showcase-visually-hidden"> (opens in a new tab)</span>
+          </a>
+        </div>
+      </div>
+    </header>
 
-      <form onSubmit={handleSubmit}>
-        <Margin bottom space="md">
-          <Input
-            label="Email Address"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            placeholder="Enter your email"
-          />
-        </Margin>
-
-        <Button title="Subscribe">Subscribe</Button>
-
-        {submitted && (
-          <Margin top space="sm">
-            <Typography>Thanks for subscribing!</Typography>
-          </Margin>
-        )}
-      </form>
-    </div>
-  );
-};
+    <main className="showcase-container">
+      <Colors />
+      <TypographyScale />
+      <SpacingScale />
+      <Components />
+    </main>
+  </div>
+);
 
 export default App;

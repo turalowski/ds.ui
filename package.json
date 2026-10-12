@@ -4,6 +4,7 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
+    "start": "yarn build && concurrently -k -n foundation,scss,react,showcase,storybook -c gray,magenta,blue,green,yellow \"yarn workspace @ds.ui/foundation dev\" \"yarn workspace @ds.ui/scss dev\" \"yarn workspace @ds.ui/react dev\" \"yarn workspace @ds.ui/playground-react dev --open\" \"yarn workspace @ds.ui/react storybook --no-open\"",
     "build": "yarn workspace @ds.ui/foundation build && yarn workspace @ds.ui/scss build && yarn workspace @ds.ui/react build",
     "dev": "concurrently -n foundation,scss,react,playground \"yarn workspace @ds.ui/foundation dev\" \"yarn workspace @ds.ui/scss dev\" \"yarn workspace @ds.ui/react dev\" \"yarn workspace @ds.ui/playground-react dev\"",
     "test": "yarn workspace @ds.ui/foundation test && yarn workspace @ds.ui/react test",
@@ -11,8 +12,7 @@
     "prepare": "husky",
     "storybook": "concurrently -n scss,storybook \"yarn workspace @ds.ui/scss dev\" \"yarn workspace @ds.ui/react storybook\"",
     "test:chromatic": "yarn workspace @ds.ui/react test:chromatic",
-    "build-storybook": "yarn build && yarn workspace @ds.ui/react build-storybook",
-    "chromatic": "npx chromatic --project-token=chpt_57c78762a08fb47"
+    "build-storybook": "yarn build && yarn workspace @ds.ui/react build-storybook"
   },
   "keywords": [],
   "author": "",

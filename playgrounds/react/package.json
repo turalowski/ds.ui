@@ -1,18 +1,26 @@
 {
   "name": "@ds.ui/playground-react",
   "version": "0.1.0",
-  "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel src/index.html -p 3000"
+    "dev": "vite --port 3000",
+    "build": "vite build",
+    "preview": "vite preview --port 3000"
   },
   "devDependencies": {
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
-    "parcel-bundler": "^1.12.5",
+    "@vitejs/plugin-react": "^6.1.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vite": "^8.3.4"
   },
-  "private": true
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@ds.ui/foundation": "0.1.2",
+    "@ds.ui/react": "0.1.3",
+    "@ds.ui/scss": "0.1.3"
+  }
 }

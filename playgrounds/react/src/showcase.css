@@ -1,0 +1,223 @@
+/* Layout styles for the showcase page only. Colors and type come from the ds.ui tokens. */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  background-color: var(--ds-background-secondary);
+  color: var(--ds-text-primary);
+}
+
+.showcase-container {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.showcase-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--ds-background-primary);
+  border-bottom: 1px solid var(--ds-border-primary);
+}
+
+.showcase-header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.showcase-header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+}
+
+.showcase-storybook-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.showcase-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.showcase-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.showcase-nav a {
+  color: var(--ds-text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.showcase-nav a:hover,
+.showcase-nav a:focus-visible {
+  color: var(--ds-color-primary);
+}
+
+.showcase-section {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background-color: var(--ds-background-primary);
+  border: 1px solid var(--ds-border-primary);
+  border-radius: 8px;
+}
+
+.showcase-section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.showcase-subsection + .showcase-subsection {
+  margin-top: 2rem;
+}
+
+.showcase-subsection-title {
+  margin-bottom: 0.75rem;
+}
+
+.showcase-muted {
+  color: var(--ds-text-secondary);
+}
+
+.showcase code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8125rem;
+}
+
+.showcase-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.showcase-grid-swatches {
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+}
+
+.showcase-grid-inputs {
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+}
+
+.showcase-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Colors */
+.showcase-swatch {
+  overflow: hidden;
+  border: 1px solid var(--ds-border-secondary);
+  border-radius: 6px;
+}
+
+.showcase-swatch-color {
+  height: 4rem;
+  border-bottom: 1px solid var(--ds-border-secondary);
+}
+
+.showcase-swatch-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.875rem;
+}
+
+.showcase-swatch-name {
+  font-weight: 600;
+}
+
+.showcase-swatch-info code {
+  color: var(--ds-text-secondary);
+}
+
+/* Typography */
+.showcase-type-row {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--ds-border-secondary);
+}
+
+.showcase-type-row:last-child {
+  border-bottom: none;
+}
+
+.showcase-type-meta {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8125rem;
+}
+
+/* Spacing */
+.showcase-spacing-row {
+  display: grid;
+  grid-template-columns: 4rem 4rem 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.375rem 0;
+}
+
+.showcase-spacing-value {
+  font-size: 0.875rem;
+}
+
+.showcase-spacing-bar {
+  height: 1rem;
+  border-radius: 2px;
+  background-color: var(--ds-color-primary);
+}
+
+/* Margin demo */
+.showcase-margin-demo {
+  background-color: var(--ds-color-primary-light);
+  border-radius: 4px;
+}
+
+.showcase-margin-content {
+  padding: 0.5rem 0.75rem;
+  background-color: var(--ds-background-primary);
+  border: 1px dashed var(--ds-color-primary);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 40rem) {
+  .showcase-section {
+    padding: 1rem;
+  }
+
+  .showcase-type-row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
