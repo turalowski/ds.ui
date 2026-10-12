@@ -3,5 +3,7 @@ lib/
 dist
 .cache
 stories/
+.env
 .env.local
+storybook-static/
 *storybook.log
