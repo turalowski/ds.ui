@@ -3,6 +3,7 @@
   "version": "0.1.3",
   "private": true,
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "type": "module",
   "license": "MIT",
   "scripts": {
@@ -13,29 +14,23 @@
     "start-storybook": "storybook dev",
     "build-storybook": "storybook build",
     "storybook": "storybook dev -p 6006",
-    "test:chromatic": "npx chromatic --project-token=\"$CHROMATIC_PROJECT_TOKEN\""
+    "test:chromatic": "chromatic --project-token=\"$CHROMATIC_PROJECT_TOKEN\""
   },
   "devDependencies": {
     "@babel/preset-env": "^7.24.5",
     "@babel/preset-react": "^7.24.1",
     "@babel/preset-typescript": "^7.24.1",
     "@chromatic-com/storybook": "^1",
-    "@ds.ui/foundation": "^0.1.0",
     "@storybook/addon-a11y": "^8.1.3",
     "@storybook/addon-essentials": "^8.1.1",
     "@storybook/addon-interactions": "^8.1.1",
-    "@storybook/addon-knobs": "^7.0.2",
     "@storybook/addon-links": "^8.1.1",
     "@storybook/addon-onboarding": "^8.1.1",
-    "@storybook/addon-storysource": "^8.1.1",
-    "@storybook/addon-webpack5-compiler-babel": "^3.0.3",
-    "@storybook/addon-webpack5-compiler-swc": "^1.0.2",
+    "@storybook/addon-storysource": "~8.1.1",
+    "@storybook/addon-webpack5-compiler-swc": "~1.0.6",
     "@storybook/blocks": "^8.1.1",
     "@storybook/builder-webpack5": "^8.1.1",
     "@storybook/cli": "^8.1.1",
-    "@storybook/manager-webpack5": "^6.5.16",
-    "@storybook/nextjs": "^8.1.3",
-    "@storybook/preset-typescript": "^3.0.0",
     "@storybook/preview-api": "^8.1.3",
     "@storybook/react": "^8.1.1",
     "@storybook/react-webpack5": "^8.1.1",
@@ -50,14 +45,17 @@
     "react": "^18.3.1",
     "rollup": "^4.17.2",
     "rollup-plugin-typescript2": "^0.36.0",
+    "storybook": "~8.1.1",
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@storybook/addon-storysource": "^8.1.1",
-    "react-icons": "^5.3.0",
-    "storybook": "^8.1.1"
+    "@ds.ui/foundation": "0.1.2",
+    "react-icons": "^5.3.0"
   },
   "files": [
     "lib"
-  ]
+  ],
+  "peerDependencies": {
+    "react": "^18.3.1"
+  }
 }
