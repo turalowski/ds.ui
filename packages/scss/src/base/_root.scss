@@ -82,18 +82,18 @@
   /* Primary */
   --ds-btn-primary-color: #{$white};
   --ds-btn-primary-bg: #{$primary};
-  --ds-btn-primary-bg-hover: #{$primary-light};
+  --ds-btn-primary-bg-hover: #{$primary-dark};
 
   /* Secondary */
   --ds-btn-secondary-color: #{$secondary};
   --ds-btn-secondary-bg: #{$white};
   --ds-btn-secondary-border: #{$secondary};
-  --ds-btn-secondary-bg-hover: #{$gray-100};
+  --ds-btn-secondary-bg-hover: #{$primary-light};
 
   /* Danger */
   --ds-btn-danger-color: #{$white};
   --ds-btn-danger-bg: #{$error};
-  --ds-btn-danger-bg-hover: #{$error-light};
+  --ds-btn-danger-bg-hover: #{$error-dark};
 
   /*=============================================
   =            Forms                            =

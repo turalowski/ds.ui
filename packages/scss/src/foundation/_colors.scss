@@ -11,16 +11,16 @@ $body-bg-color: var(--ds-background-primary, $background-primary) !default;
 
 $btn-primary-color: var(--ds-btn-primary-color, $white) !default;
 $btn-primary-bg: var(--ds-btn-primary-bg, $primary) !default;
-$btn-primary-bg-hover: var(--ds-btn-primary-bg-hover, $primary-light) !default;
+$btn-primary-bg-hover: var(--ds-btn-primary-bg-hover, $primary-dark) !default;
 
 $btn-secondary-color: var(--ds-btn-secondary-color, $primary) !default;
 $btn-secondary-bg: var(--ds-btn-secondary-bg, $white) !default;
 $btn-secondary-border: var(--ds-btn-secondary-border, $primary) !default;
-$btn-secondary-bg-hover: var(--ds-btn-secondary-bg-hover, $gray-100) !default;
+$btn-secondary-bg-hover: var(--ds-btn-secondary-bg-hover, $primary-light) !default;
 
 $btn-danger-color: var(--ds-btn-danger-color, $white) !default;
 $btn-danger-bg: var(--ds-btn-danger-bg, $error) !default;
-$btn-danger-bg-hover: var(--ds-btn-danger-bg-hover, $error-light) !default;
+$btn-danger-bg-hover: var(--ds-btn-danger-bg-hover, $error-dark) !default;
 
 /*=============================================
 =            Form Colors                      =
@@ -39,10 +39,14 @@ $form-disabled-bg: var(--ds-background-disabled, $background-disabled) !default;
 =            Badge Colors                     =
 =============================================*/
 
-$badge-default-bg: var(--ds-color-sucess, $gray-400) !default;
-$badge-success-bg: var(--ds-color-success, $success) !default;
-$badge-warning-bg: var(--ds-color-warning, $warning) !default;
-$badge-error-bg: var(--ds-color-error, $error) !default;
+$badge-default-bg: var(--ds-color-primary-light, $primary-light) !default;
+$badge-default-color: var(--ds-color-primary, $primary) !default;
+$badge-success-bg: var(--ds-color-success-light, $success-light) !default;
+$badge-success-color: var(--ds-color-success-dark, $success-dark) !default;
+$badge-warning-bg: var(--ds-color-warning-light, $warning-light) !default;
+$badge-warning-color: var(--ds-color-warning-dark, $warning-dark) !default;
+$badge-error-bg: var(--ds-color-error-light, $error-light) !default;
+$badge-error-color: var(--ds-color-error-dark, $error-dark) !default;
 
 /*=============================================
 =            Accordion Colors                 =

@@ -2,35 +2,39 @@
 =            Colors                           =
 =============================================*/
 
-$primary: #a2905c;
-$primary-light: lighten($primary, 20%);
-$primary-dark: darken($primary, 10%);
+// Each color family follows the same pattern:
+// base = solid fills, -light = soft tint for backgrounds, -dark = hover states and text on tints.
 
-$secondary: #1d1f22;
-$secondary-light: lighten($secondary, 30%);
-$secondary-dark: darken($secondary, 10%);
+$primary: #1f5673;
+$primary-light: #e4eef4;
+$primary-dark: #15394c;
 
-$gray-100: #f1f2f3;
-$gray-200: #e4e5e7;
-$gray-300: #d1d3d6;
-$gray-400: #a3a5ad;
-$gray-500: #737680;
-$gray-600: #4a4c51;
+$secondary: #15232c;
+$secondary-light: #3b4c58;
+$secondary-dark: #0b141a;
+
+// Slate grays with a slight blue tint to match the primary color.
+$gray-100: #f3f6f8;
+$gray-200: #e5ebef;
+$gray-300: #cfd8df;
+$gray-400: #9aa8b4;
+$gray-500: #66788a;
+$gray-600: #3f4e5c;
 
 $white: #fff;
 $black: #000;
 
-$success: #79c851;
-$success-light: $primary-light;
-$success-dark: $primary-dark;
+$success: #1a7f53;
+$success-light: #e3f4ec;
+$success-dark: #13603f;
 
-$warning: #f3b952;
-$warning-light: lighten($warning, 20%);
-$warning-dark: darken($warning, 10%);
+$warning: #d97706;
+$warning-light: #fdf1dc;
+$warning-dark: #8a4b06;
 
-$error: #f36c66;
-$error-light: lighten($error, 20%);
-$error-dark: darken($error, 10%);
+$error: #c9353b;
+$error-light: #fbe9ea;
+$error-dark: #9c2328;
 
 /* Semantic Colors */
 $text-primary: $secondary;

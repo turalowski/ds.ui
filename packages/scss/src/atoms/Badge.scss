@@ -13,22 +13,22 @@
 
   &-default {
     background-color: $badge-default-bg;
-    color: $white;
+    color: $badge-default-color;
   }
 
   &-success {
     background-color: $badge-success-bg;
-    color: $white;
+    color: $badge-success-color;
   }
 
   &-warning {
     background-color: $badge-warning-bg;
-    color: $white;
+    color: $badge-warning-color;
   }
 
   &-error {
     background-color: $badge-error-bg;
-    color: $white;
+    color: $badge-error-color;
   }
 
   &-icon {
