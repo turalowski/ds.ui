@@ -1,32 +1,22 @@
 import React from 'react';
 
-export interface ButtonProps {
-  title: string;
-  onClick?: () => void;
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'danger';
-  disabled?: boolean;
-  className?: string;
-  children: React.ReactNode;
 }
 
-const Button: React.FC<ButtonProps> = ({ 
-  title, 
-  onClick, 
+const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
-  disabled = false,
   className = '',
+  type = 'button',
   children,
   ...rest
 }) => {
   const buttonClassName = `ds-button ds-button-${variant} ${className}`.trim();
 
   return (
-    <button 
+    <button
       className={buttonClassName}
-      onClick={onClick}
-      disabled={disabled}
-      title={title}
-      type="button"
+      type={type}
       {...rest}
     >
       {children}

@@ -11,6 +11,9 @@ const meta: Meta<typeof Switch> = {
     checked: {
       control: 'boolean',
     },
+    defaultChecked: {
+      control: 'boolean',
+    },
     disabled: {
       control: 'boolean',
     },
@@ -31,14 +34,13 @@ type Story = StoryObj<typeof Switch>;
 
 export const Default: Story = {
   args: {
-    checked: false,
     label: 'Toggle me',
   },
 };
 
 export const Checked: Story = {
   args: {
-    checked: true,
+    defaultChecked: true,
     label: 'Active state',
   },
 };
@@ -61,7 +63,5 @@ export const Sizes: Story = {
 };
 
 export const WithoutLabel: Story = {
-  args: {
-    checked: false,
-  },
+  args: {},
 };

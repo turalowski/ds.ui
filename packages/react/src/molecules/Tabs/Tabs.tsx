@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useId, useRef, useState } from 'react';
 
 export interface TabItem {
   label: string;
@@ -22,12 +22,18 @@ const Tabs: React.FC<TabsProps> = ({
   className = '',
 }) => {
   const [internalActiveTab, setInternalActiveTab] = useState<number>(defaultActiveTab);
-  
-  const activeTab = controlledActiveTab !== undefined ? controlledActiveTab : internalActiveTab;
+  const baseId = useId();
+  const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
-  const handleTabClick = (index: number) => {
-    if (items[index].disabled) return;
-    
+  const activeTab = controlledActiveTab !== undefined ? controlledActiveTab : internalActiveTab;
+  const activeItem = items[activeTab];
+  const enabledIndexes = items.flatMap((item, index) => (item.disabled ? [] : [index]));
+  // The tab that receives focus when tabbing into the list: the active one, or the first enabled one.
+  const focusableTab = activeItem && !activeItem.disabled ? activeTab : enabledIndexes[0];
+
+  const selectTab = (index: number) => {
+    if (items[index]?.disabled) return;
+
     if (onTabChange) {
       onTabChange(index);
     }
@@ -36,31 +42,74 @@ const Tabs: React.FC<TabsProps> = ({
     }
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (enabledIndexes.length === 0) return;
+
+    const current = enabledIndexes.indexOf(tabRefs.current.indexOf(event.target as HTMLButtonElement));
+    const count = enabledIndexes.length;
+    let next: number;
+
+    switch (event.key) {
+      case 'ArrowRight':
+        next = enabledIndexes[(current + 1) % count];
+        break;
+      case 'ArrowLeft':
+        next = enabledIndexes[(current - 1 + count) % count];
+        break;
+      case 'Home':
+        next = enabledIndexes[0];
+        break;
+      case 'End':
+        next = enabledIndexes[count - 1];
+        break;
+      default:
+        return;
+    }
+
+    event.preventDefault();
+    selectTab(next);
+    tabRefs.current[next]?.focus();
+  };
+
   const baseClassName = 'ds-tabs';
   const finalClassName = className ? `${baseClassName} ${className}` : baseClassName;
 
   return (
     <div className={finalClassName}>
-      <div className="ds-tabs-list" role="tablist">
+      <div className="ds-tabs-list" role="tablist" onKeyDown={handleKeyDown}>
         {items.map((item, index) => (
           <button
             key={index}
+            ref={element => {
+              tabRefs.current[index] = element;
+            }}
+            type="button"
             role="tab"
+            id={`${baseId}-tab-${index}`}
             className={`ds-tab-button ${
               activeTab === index ? 'ds-tab-active' : ''
             } ${item.disabled ? 'ds-tab-disabled' : ''}`}
-            onClick={() => handleTabClick(index)}
+            onClick={() => selectTab(index)}
             aria-selected={activeTab === index}
+            aria-controls={activeTab === index ? `${baseId}-panel-${index}` : undefined}
             aria-disabled={item.disabled}
-            tabIndex={activeTab === index ? 0 : -1}
+            tabIndex={focusableTab === index ? 0 : -1}
           >
             {item.label}
           </button>
         ))}
       </div>
-      <div className="ds-tab-content">
-        {items[activeTab].content}
-      </div>
+      {activeItem && (
+        <div
+          className="ds-tab-content"
+          role="tabpanel"
+          id={`${baseId}-panel-${activeTab}`}
+          aria-labelledby={`${baseId}-tab-${activeTab}`}
+          tabIndex={0}
+        >
+          {activeItem.content}
+        </div>
+      )}
     </div>
   );
 };
