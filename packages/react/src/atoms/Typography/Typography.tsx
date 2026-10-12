@@ -13,7 +13,7 @@ const Typography: React.FC<TypographyProps> = ({
   className = '',
 }) => {
 
-  const baseClassName = `dse-typography dse-typography-${variant}`;
+  const baseClassName = `ds-typography ds-typography-${variant}`;
   const finalClassName = className ? `${baseClassName} ${className}` : baseClassName;
 
   const Component = variant.match(/^h[1-6]$/) ? variant : 'p';

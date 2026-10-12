@@ -51,7 +51,7 @@ const Accordion: React.FC<AccordionProps> = ({
     }
   };
 
-  const baseClassName = 'dse-accordion';
+  const baseClassName = 'ds-accordion';
   const finalClassName = className ? `${baseClassName} ${className}` : baseClassName;
 
   return (
@@ -60,19 +60,19 @@ const Accordion: React.FC<AccordionProps> = ({
         const isExpanded = expandedItems.includes(index);
         
         return (
-          <div key={index} className="dse-accordion-item" {...rest}>
+          <div key={index} className="ds-accordion-item" {...rest}>
             <div
-              className="dse-accordion-header"
+              className="ds-accordion-header"
               onClick={() => toggleItem(index)}
             >
               {item.title}
               <FiChevronDown
-                className={`dse-accordion-icon ${isExpanded ? 'dse-accordion-icon-rotated' : ''}`}
+                className={`ds-accordion-icon ${isExpanded ? 'ds-accordion-icon-rotated' : ''}`}
               />
             </div>
             <div
-              className={`dse-accordion-content ${
-                !isExpanded ? 'dse-accordion-content-collapsed' : ''
+              className={`ds-accordion-content ${
+                !isExpanded ? 'ds-accordion-content-collapsed' : ''
               }`}
             >
               {item.content}

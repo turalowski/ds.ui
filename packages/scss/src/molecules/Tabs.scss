@@ -1,6 +1,6 @@
 @import "foundation/all";
 
-.dse-tabs {
+.ds-tabs {
   width: 100%;
 
   &-list {
@@ -9,7 +9,7 @@
     margin-bottom: map-get($spacing, 'md');
   }
 
-  .dse-tab-button {
+  .ds-tab-button {
     background: none;
     border: none;
     padding: map-get($spacing, 'sm') map-get($spacing, 'md');
@@ -20,22 +20,22 @@
     border-bottom: 2px solid transparent;
     transition: all 0.2s ease;
 
-    &:hover:not(.dse-tab-disabled) {
+    &:hover:not(.ds-tab-disabled) {
       color: $primary;
     }
 
-    &.dse-tab-active {
+    &.ds-tab-active {
       color: $primary;
       border-bottom-color: $primary;
     }
 
-    &.dse-tab-disabled {
+    &.ds-tab-disabled {
       opacity: 0.5;
       cursor: not-allowed;
     }
   }
 
-  .dse-tab-content {
+  .ds-tab-content {
     padding: map-get($spacing, 'sm') 0;
   }
 }

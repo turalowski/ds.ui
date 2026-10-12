@@ -2,7 +2,7 @@ import React from 'react';
 import Tabs from './Tabs';
 import type { Meta, StoryObj } from '@storybook/react';
 
-import '@ds.ee/scss/lib/Tabs.css';
+import '@ds.ui/scss/lib/Tabs.css';
 
 const meta: Meta<typeof Tabs> = {
   title: 'Design System/Molecules/Tabs',

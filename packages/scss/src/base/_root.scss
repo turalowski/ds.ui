@@ -2,118 +2,118 @@
   /*=============================================
   =            Base Colors                      =
   =============================================*/
-  --dse-color-primary: #{$primary};
-  --dse-color-primary-light: #{$primary-light};
-  --dse-color-primary-dark: #{$primary-dark};
+  --ds-color-primary: #{$primary};
+  --ds-color-primary-light: #{$primary-light};
+  --ds-color-primary-dark: #{$primary-dark};
   
-  --dse-color-secondary: #{$secondary};
-  --dse-color-secondary-light: #{$secondary-light};
-  --dse-color-secondary-dark: #{$secondary-dark};
+  --ds-color-secondary: #{$secondary};
+  --ds-color-secondary-light: #{$secondary-light};
+  --ds-color-secondary-dark: #{$secondary-dark};
   
   /*=============================================
   =            Gray Scale                       =
   =============================================*/
-  --dse-color-gray-100: #{$gray-100};
-  --dse-color-gray-200: #{$gray-200};
-  --dse-color-gray-300: #{$gray-300};
-  --dse-color-gray-400: #{$gray-400};
-  --dse-color-gray-500: #{$gray-500};
-  --dse-color-gray-600: #{$gray-600};
+  --ds-color-gray-100: #{$gray-100};
+  --ds-color-gray-200: #{$gray-200};
+  --ds-color-gray-300: #{$gray-300};
+  --ds-color-gray-400: #{$gray-400};
+  --ds-color-gray-500: #{$gray-500};
+  --ds-color-gray-600: #{$gray-600};
   
   /*=============================================
   =            Status Colors                    =
   =============================================*/
-  --dse-color-success: #{$success};
-  --dse-color-success-light: #{$success-light};
-  --dse-color-success-dark: #{$success-dark};
+  --ds-color-success: #{$success};
+  --ds-color-success-light: #{$success-light};
+  --ds-color-success-dark: #{$success-dark};
   
-  --dse-color-warning: #{$warning};
-  --dse-color-warning-light: #{$warning-light};
-  --dse-color-warning-dark: #{$warning-dark};
+  --ds-color-warning: #{$warning};
+  --ds-color-warning-light: #{$warning-light};
+  --ds-color-warning-dark: #{$warning-dark};
   
-  --dse-color-error: #{$error};
-  --dse-color-error-light: #{$error-light};
-  --dse-color-error-dark: #{$error-dark};
+  --ds-color-error: #{$error};
+  --ds-color-error-light: #{$error-light};
+  --ds-color-error-dark: #{$error-dark};
   
   /*=============================================
   =            Semantic Colors                  =
   =============================================*/
-  --dse-text-primary: #{$text-primary};
-  --dse-text-secondary: #{$text-secondary};
-  --dse-text-disabled: #{$text-disabled};
+  --ds-text-primary: #{$text-primary};
+  --ds-text-secondary: #{$text-secondary};
+  --ds-text-disabled: #{$text-disabled};
   
-  --dse-background-primary: #{$background-primary};
-  --dse-background-secondary: #{$background-secondary};
-  --dse-background-disabled: #{$background-disabled};
+  --ds-background-primary: #{$background-primary};
+  --ds-background-secondary: #{$background-secondary};
+  --ds-background-disabled: #{$background-disabled};
   
-  --dse-border-primary: #{$border-primary};
-  --dse-border-secondary: #{$border-secondary};
+  --ds-border-primary: #{$border-primary};
+  --ds-border-secondary: #{$border-secondary};
 
   /*=============================================
   =            Global Colors                    =
   =============================================*/
-  --dse-body-text-color: #{$text-primary};
-  --dse-body-bg-color: #{$background-primary};
+  --ds-body-text-color: #{$text-primary};
+  --ds-body-bg-color: #{$background-primary};
 
   /*=============================================
   =            Typography                       =
   =============================================*/
   /* Body */
-  --dse-body-font-size: #{$body-font-size};
-  --dse-body-font-weight: #{$fw-normal};
+  --ds-body-font-size: #{$body-font-size};
+  --ds-body-font-weight: #{$fw-normal};
 
   /* Headings */
-  --dse-h1-font-size: #{$h-1};
-  --dse-h1-font-weight: #{$fw-bold};
-  --dse-h2-font-size: #{$h-2}; 
-  --dse-h2-font-weight: #{$fw-semibold};
-  --dse-h3-font-size: #{$h-3};
-  --dse-h3-font-weight: #{$fw-medium};
-  --dse-h4-font-size: #{$h-4};
-  --dse-h4-font-weight: #{$fw-medium};
-  --dse-h5-font-size: #{$h-5};
-  --dse-h5-font-weight: #{$fw-normal};
-  --dse-h6-font-size: #{$h-6};
-  --dse-h6-font-weight: #{$fw-normal};
+  --ds-h1-font-size: #{$h-1};
+  --ds-h1-font-weight: #{$fw-bold};
+  --ds-h2-font-size: #{$h-2}; 
+  --ds-h2-font-weight: #{$fw-semibold};
+  --ds-h3-font-size: #{$h-3};
+  --ds-h3-font-weight: #{$fw-medium};
+  --ds-h4-font-size: #{$h-4};
+  --ds-h4-font-weight: #{$fw-medium};
+  --ds-h5-font-size: #{$h-5};
+  --ds-h5-font-weight: #{$fw-normal};
+  --ds-h6-font-size: #{$h-6};
+  --ds-h6-font-weight: #{$fw-normal};
 
   /*=============================================
   =            Buttons                          =
   =============================================*/
   /* Primary */
-  --dse-btn-primary-color: #{$white};
-  --dse-btn-primary-bg: #{$primary};
-  --dse-btn-primary-bg-hover: #{$primary-light};
+  --ds-btn-primary-color: #{$white};
+  --ds-btn-primary-bg: #{$primary};
+  --ds-btn-primary-bg-hover: #{$primary-light};
 
   /* Secondary */
-  --dse-btn-secondary-color: #{$secondary};
-  --dse-btn-secondary-bg: #{$white};
-  --dse-btn-secondary-border: #{$secondary};
-  --dse-btn-secondary-bg-hover: #{$gray-100};
+  --ds-btn-secondary-color: #{$secondary};
+  --ds-btn-secondary-bg: #{$white};
+  --ds-btn-secondary-border: #{$secondary};
+  --ds-btn-secondary-bg-hover: #{$gray-100};
 
   /* Danger */
-  --dse-btn-danger-color: #{$white};
-  --dse-btn-danger-bg: #{$error};
-  --dse-btn-danger-bg-hover: #{$error-light};
+  --ds-btn-danger-color: #{$white};
+  --ds-btn-danger-bg: #{$error};
+  --ds-btn-danger-bg-hover: #{$error-light};
 
   /*=============================================
   =            Forms                            =
   =============================================*/
-  --dse-form-color: #{$text-primary};
-  --dse-form-bg: #{$background-primary};
-  --dse-form-label-color: #{$text-primary};
-  --dse-form-background-disabled: #{$background-disabled};
+  --ds-form-color: #{$text-primary};
+  --ds-form-bg: #{$background-primary};
+  --ds-form-label-color: #{$text-primary};
+  --ds-form-background-disabled: #{$background-disabled};
   
   /* Form States */
-  --dse-form-error-color: #{$error};
-  --dse-form-error-border: #{$error};
-  --dse-form-border-focus-color: #{$primary};
+  --ds-form-error-color: #{$error};
+  --ds-form-error-border: #{$error};
+  --ds-form-border-focus-color: #{$primary};
 
   /*=============================================
   =            Accordion                        =
   =============================================*/
   
-  --dse-accordion-border-color: #{$border-primary};
-  --dse-accordion-color: #{$text-primary};
-  --dse-accordion-bg: #{$background-primary};
-  --dse-accordion-hover-bg: #{rgba($gray-200, 0.5)};
+  --ds-accordion-border-color: #{$border-primary};
+  --ds-accordion-color: #{$text-primary};
+  --ds-accordion-bg: #{$background-primary};
+  --ds-accordion-hover-bg: #{rgba($gray-200, 0.5)};
 }

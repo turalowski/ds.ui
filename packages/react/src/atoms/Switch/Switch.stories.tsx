@@ -2,7 +2,7 @@ import React from 'react';
 import Switch from './Switch';
 import type { Meta, StoryObj } from '@storybook/react';
 
-import '@ds.ee/scss/lib/Switch.css';
+import '@ds.ui/scss/lib/Switch.css';
 
 const meta: Meta<typeof Switch> = {
   title: 'Design System/Atoms/Switch',

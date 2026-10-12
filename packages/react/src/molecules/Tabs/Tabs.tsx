@@ -36,19 +36,19 @@ const Tabs: React.FC<TabsProps> = ({
     }
   };
 
-  const baseClassName = 'dse-tabs';
+  const baseClassName = 'ds-tabs';
   const finalClassName = className ? `${baseClassName} ${className}` : baseClassName;
 
   return (
     <div className={finalClassName}>
-      <div className="dse-tabs-list" role="tablist">
+      <div className="ds-tabs-list" role="tablist">
         {items.map((item, index) => (
           <button
             key={index}
             role="tab"
-            className={`dse-tab-button ${
-              activeTab === index ? 'dse-tab-active' : ''
-            } ${item.disabled ? 'dse-tab-disabled' : ''}`}
+            className={`ds-tab-button ${
+              activeTab === index ? 'ds-tab-active' : ''
+            } ${item.disabled ? 'ds-tab-disabled' : ''}`}
             onClick={() => handleTabClick(index)}
             aria-selected={activeTab === index}
             aria-disabled={item.disabled}
@@ -58,7 +58,7 @@ const Tabs: React.FC<TabsProps> = ({
           </button>
         ))}
       </div>
-      <div className="dse-tab-content">
+      <div className="ds-tab-content">
         {items[activeTab].content}
       </div>
     </div>

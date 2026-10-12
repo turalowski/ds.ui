@@ -3,12 +3,12 @@
 $sides: left, right, top, bottom;
 
 @each $space, $value in $spacing {
-  .dse-margin-#{$space} {
+  .ds-margin-#{$space} {
     margin: $value;
   }
 
   @each $side in $sides {
-    .dse-margin-#{$side}-#{$space} {
+    .ds-margin-#{$side}-#{$space} {
       margin-#{$side}: $value;
     }
   }

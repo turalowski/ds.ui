@@ -1,6 +1,6 @@
 @import 'foundation/all';
 
-.dse-accordion {
+.ds-accordion {
   font-family: $body-font-family;
   border: 1px solid $accordion-border-color;
   border-radius: map-get($button-radius, 'base');
@@ -21,7 +21,7 @@
     justify-content: space-between;
     padding: map-get($spacing, 'sm');
     background-color: $gray-100;
-    color: var(--dse-accordion-color);
+    color: var(--ds-accordion-color);
     font-size: $body-font-size;
     cursor: pointer;
     user-select: none;
@@ -45,8 +45,8 @@
   &-content {
     padding: map-get($spacing, 'sm');
     font-size: $fs-base;
-    background-color: var(--dse-accordion-bg);
-    color: var(--dse-accordion-color);
+    background-color: var(--ds-accordion-bg);
+    color: var(--ds-accordion-color);
     overflow: hidden;
     transition: height 0.3s ease-out;
   }

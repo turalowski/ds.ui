@@ -3,7 +3,7 @@ import Badge from './Badge';
 import type { Meta, StoryObj } from '@storybook/react';
 import { FiCheck, FiAlertTriangle, FiAlertCircle } from 'react-icons/fi';
 
-import '@ds.ee/scss/lib/Badge.css';
+import '@ds.ui/scss/lib/Badge.css';
 
 const meta: Meta<typeof Badge> = {
   title: 'Design System/Atoms/Badge',

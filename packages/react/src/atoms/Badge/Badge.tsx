@@ -17,14 +17,14 @@ const Badge: React.FC<BadgeProps> = ({
   count,
   className = '',
 }) => {
-  const baseClassName = `dse-badge dse-badge-${variant}`;
+  const baseClassName = `ds-badge ds-badge-${variant}`;
   const finalClassName = className ? `${baseClassName} ${className}` : baseClassName;
 
   return (
     <span className={finalClassName}>
-      {icon && <span className="dse-badge-icon">{icon}</span>}
+      {icon && <span className="ds-badge-icon">{icon}</span>}
       {children}
-      {count !== undefined && <span className="dse-badge-count">{count}</span>}
+      {count !== undefined && <span className="ds-badge-count">{count}</span>}
     </span>
   );
 };

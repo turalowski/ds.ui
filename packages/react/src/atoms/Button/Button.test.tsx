@@ -8,7 +8,7 @@ describe('Button', () => {
     const { getByRole } = render(<Button title="Default Button">Click me</Button>);
     
     const button = getByRole('button');
-    expect(button).toHaveClass('dse-button dse-button-primary');
+    expect(button).toHaveClass('ds-button ds-button-primary');
     expect(button).toHaveAttribute('title', 'Default Button');
     expect(button).not.toBeDisabled();
   });
@@ -21,7 +21,7 @@ describe('Button', () => {
     );
     
     const button = getByRole('button');
-    expect(button).toHaveClass('dse-button dse-button-primary');
+    expect(button).toHaveClass('ds-button ds-button-primary');
   });
 
   it('renders secondary variant correctly', () => {
@@ -32,7 +32,7 @@ describe('Button', () => {
     );
     
     const button = getByRole('button');
-    expect(button).toHaveClass('dse-button dse-button-secondary');
+    expect(button).toHaveClass('ds-button ds-button-secondary');
   });
 
   it('handles disabled state correctly', () => {
@@ -90,6 +90,6 @@ describe('Button', () => {
     );
     
     const button = getByRole('button');
-    expect(button).toHaveClass('dse-button dse-button-danger');
+    expect(button).toHaveClass('ds-button ds-button-danger');
   });
 });

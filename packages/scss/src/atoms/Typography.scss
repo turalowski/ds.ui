@@ -1,60 +1,60 @@
 @import "foundation/all";
 
-.dse-typography {
+.ds-typography {
   margin: 0;
   font-family: $body-font-family;
 }
 
-.dse-typography-h1 {
+.ds-typography-h1 {
   font-weight: $h-1-font-weight;
   font-size: $h-1-font-size;
   color: $text-primary;
 }
 
-.dse-typography-h2 {
+.ds-typography-h2 {
   font-weight: $h-2-font-weight;
   font-size: $h-2-font-size;
   color: $text-primary;
 }
 
-.dse-typography-h3 {
+.ds-typography-h3 {
   font-weight: $h-3-font-weight;
   font-size: $h-3-font-size;
   color: $text-primary;
 }
 
-.dse-typography-h4 {
+.ds-typography-h4 {
   font-weight: $h-4-font-weight;
   font-size: $h-4-font-size;
   color: $text-primary;
 }
 
-.dse-typography-h5 {
+.ds-typography-h5 {
   font-weight: $h-5-font-weight;
   font-size: $h-5-font-size;
   color: $text-primary;
 }
 
-.dse-typography-h6 {
+.ds-typography-h6 {
   font-weight: $h-6-font-weight;
   font-size: $h-6-font-size;
   color: $text-primary;
 }
 
-.dse-typography-body {
+.ds-typography-body {
   font-weight: $body-font-weight;
   font-size: $body-font-size;
   color: $text-primary;
 }
 
-.dse-typography-caption {
+.ds-typography-caption {
   font-weight: $fw-normal;
   font-size: $fs-xs;
   color: $text-secondary;
 }
 
 @each $size, $value in $fs {
-  .dse-typography-#{$size} {
+  .ds-typography-#{$size} {
     font-size: $value;
   }
 }

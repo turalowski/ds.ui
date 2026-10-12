@@ -25,5 +25,5 @@ export default {
       },
     }),
   ],
-  external: ['react', '@ds.ee/foundation'],
+  external: ['react', '@ds.ui/foundation'],
 };

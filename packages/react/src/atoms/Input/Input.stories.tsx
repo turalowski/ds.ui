@@ -1,7 +1,7 @@
 import Input from './Input';
 import type { Meta, StoryObj } from '@storybook/react';
 
-import '@ds.ee/scss/lib/Input.css';
+import '@ds.ui/scss/lib/Input.css';
 
 const meta: Meta<typeof Input> = {
   title: 'Design System/Atoms/Input',

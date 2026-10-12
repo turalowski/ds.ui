@@ -11,18 +11,18 @@ const Input: React.FC<InputProps> = ({
   ...props
 }) => {
   return (
-    <div className="dse-input-wrapper">
+    <div className="ds-input-wrapper">
       {label && (
-        <label className="dse-input-label">
+        <label className="ds-input-label">
           {label}
         </label>
       )}
       <input
-        className={`dse-input ${error ? 'dse-input-error' : ''}`}
+        className={`ds-input ${error ? 'ds-input-error' : ''}`}
         {...props}
       />
       {error && (
-        <div className="dse-input-error-message">
+        <div className="ds-input-error-message">
           {error}
         </div>
       )}

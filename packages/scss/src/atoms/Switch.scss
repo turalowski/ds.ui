@@ -1,12 +1,12 @@
 @import "foundation/all";
 
-.dse-switch-wrapper {
+.ds-switch-wrapper {
   display: inline-flex;
   align-items: center;
   gap: map-get($spacing, 'xs');
 }
 
-.dse-switch {
+.ds-switch {
   --switch-width: 44px;
   --switch-height: 24px;
   --switch-padding: 2px;
@@ -20,7 +20,7 @@
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 
-  &:hover:not(.dse-switch-disabled) {
+  &:hover:not(.ds-switch-disabled) {
     background-color: $gray-400;
   }
 
@@ -29,26 +29,26 @@
     outline-offset: 2px;
   }
 
-  &.dse-switch-checked {
+  &.ds-switch-checked {
     background-color: $primary;
 
-    &:hover:not(.dse-switch-disabled) {
+    &:hover:not(.ds-switch-disabled) {
       background-color: $primary-light;
     }
 
-    .dse-switch-slider {
+    .ds-switch-slider {
       transform: translateX(calc(var(--switch-width) - var(--switch-height)));
     }
   }
 
-  &.dse-switch-disabled {
+  &.ds-switch-disabled {
     opacity: 0.5;
     cursor: not-allowed;
     background-color: $gray-200;
   }
 }
 
-.dse-switch-slider {
+.ds-switch-slider {
   position: absolute;
   top: var(--switch-padding);
   left: var(--switch-padding);
@@ -60,7 +60,7 @@
   box-shadow: 0 2px 4px rgba($black, 0.1);
 }
 
-.dse-switch-input {
+.ds-switch-input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -72,12 +72,12 @@
   border: 0;
 }
 
-.dse-switch-label {
+.ds-switch-label {
   font-family: $body-font-family;
   font-size: $body-font-size;
   color: $text-primary;
 
-  &.dse-switch-disabled {
+  &.ds-switch-disabled {
     color: $text-disabled;
   }
 }

@@ -1,7 +1,7 @@
 import Typography from './Typography';
 import type { Meta, StoryObj } from '@storybook/react';
 
-import '@ds.ee/scss/lib/Typography.css';
+import '@ds.ui/scss/lib/Typography.css';
 
 const meta: Meta<typeof Typography> = {
   title: 'Design System/Atoms/Typography',

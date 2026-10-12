@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Typography, Input, Button, Margin } from '@ds.ee/react';
+import { Typography, Input, Button, Margin } from '@ds.ui/react';
 
 const App = () => {
   const [email, setEmail] = useState('');
@@ -11,7 +11,7 @@ const App = () => {
   };
 
   return (
-    <div className="dse-margin-md dse-width-xl">
+    <div className="ds-margin-md ds-width-xl">
       <Margin top bottom space="lg">
         <Typography>Welcome to Design System</Typography>
       </Margin>

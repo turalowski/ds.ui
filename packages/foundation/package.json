@@ -1,6 +1,7 @@
 {
-  "name": "@ds.ee/foundation",
+  "name": "@ds.ui/foundation",
   "version": "0.1.2",
+  "private": true,
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
@@ -14,9 +15,6 @@
     "@babel/preset-typescript": "^7.24.1",
     "@types/jest": "^29.5.12",
     "jest": "^29.7.0"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "files": [
     "lib"

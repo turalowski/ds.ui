@@ -1,18 +1,18 @@
 @import "foundation/all";
 
-.dse-input-wrapper {
+.ds-input-wrapper {
   display: flex;
   flex-direction: column;
   gap: map-get($spacing, 'xxxs');
 }
 
-.dse-input-label {
+.ds-input-label {
   font-family: $body-font-family;
   font-size: $body-font-size-sm;
   color: $form-label-color;
 }
 
-.dse-input {
+.ds-input {
   padding: map-get($spacing, 'xs') map-get($spacing, 'sm');
   font-family: $body-font-family;
   font-size: $body-font-size;
@@ -34,7 +34,7 @@
     cursor: not-allowed;
   }
 
-  &.dse-input-error {
+  &.ds-input-error {
     border-color: $form-error-border;
 
     &:focus {
@@ -43,7 +43,7 @@
   }
 }
 
-.dse-input-error-message {
+.ds-input-error-message {
   font-family: $body-font-family;
   font-size: $body-font-size-sm;
   color: $form-error-color;

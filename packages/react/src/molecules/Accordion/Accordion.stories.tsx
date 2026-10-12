@@ -2,7 +2,7 @@ import React from 'react';
 import Accordion from './Accordion';
 import type { Meta, StoryObj } from '@storybook/react';
 
-import '@ds.ee/scss/lib/Accordion.css';
+import '@ds.ui/scss/lib/Accordion.css';
 
 const meta: Meta<typeof Accordion> = {
   title: 'Design System/Molecules/Accordion',

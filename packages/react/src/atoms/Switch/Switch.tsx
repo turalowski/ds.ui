@@ -17,7 +17,7 @@ const Switch: React.FC<SwitchProps> = ({
   label,
   className = '',
 }) => {
-  const baseClassName = `dse-switch dse-switch-${size} ${checked ? 'dse-switch-checked' : ''}`;
+  const baseClassName = `ds-switch ds-switch-${size} ${checked ? 'ds-switch-checked' : ''}`;
   const finalClassName = className ? `${baseClassName} ${className}` : baseClassName;
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -25,18 +25,18 @@ const Switch: React.FC<SwitchProps> = ({
   };
 
   return (
-    <label className={`dse-switch-wrapper ${disabled ? 'dse-switch-disabled' : ''}`}>
+    <label className={`ds-switch-wrapper ${disabled ? 'ds-switch-disabled' : ''}`}>
       <input
         type="checkbox"
         checked={checked}
         onChange={handleChange}
         disabled={disabled}
-        className="dse-switch-input"
+        className="ds-switch-input"
       />
-      <span className={`${finalClassName} ${disabled ? 'dse-switch-disabled' : ''}`}>
-        <span className="dse-switch-slider" />
+      <span className={`${finalClassName} ${disabled ? 'ds-switch-disabled' : ''}`}>
+        <span className="ds-switch-slider" />
       </span>
-      {label && <span className={`dse-switch-label ${disabled ? 'dse-switch-disabled' : ''}`}>{label}</span>}
+      {label && <span className={`ds-switch-label ${disabled ? 'ds-switch-disabled' : ''}`}>{label}</span>}
     </label>
   );
 };

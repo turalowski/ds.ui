@@ -1,15 +1,15 @@
-# Design System (ds.ee)
+# Design System (ds.ui)
 
-A comprehensive design system built with React, TypeScript, and SCSS, utilizing a monorepo architecture with Yarn workspaces and Lerna.
+A comprehensive design system built with React, TypeScript, and SCSS, utilizing a monorepo architecture with Yarn workspaces.
 
 ## Packages
 
 The repository consists of the following packages:
 
-- `@ds.ee/scss`: Core SCSS variables, mixins, and foundation styles
-- `@ds.ee/react`: React components built using `@ds.ee/scss`
-- `@ds.ee/foundation`: Shared constants and foundation elements
-- `@ds.ee/playgrounds/react`: Development playground for testing components
+- `@ds.ui/scss`: Core SCSS variables, mixins, and foundation styles
+- `@ds.ui/react`: React components built using `@ds.ui/scss`
+- `@ds.ui/foundation`: Shared constants and foundation elements
+- `@ds.ui/playground-react`: Development playground for testing components
 
 ## Architecture
 
@@ -27,7 +27,7 @@ Components are organized following the Atomic Design methodology:
 
 The project uses:
 - **Yarn Workspaces**: Manages dependencies and enables package symlinks
-- **Lerna**: Handles versioning and publishing
+- **concurrently**: Runs the package watchers together in `yarn dev` and `yarn storybook`
 - **Rollup**: Bundles the React components
 - **Storybook**: Component development and documentation
 
@@ -64,10 +64,9 @@ yarn test
 - `yarn build`: Build all packages
 - `yarn dev`: Start development mode
 - `yarn test`: Run tests
-- `yarn publish`: Test, build, and publish packages
 - `yarn commit`: Use commitizen for conventional commits
 - `yarn test:chromatic`: Run visual regression tests
-- `yarn build:storybook`: Build Storybook documentation
+- `yarn build-storybook`: Build Storybook documentation
 
 ### Component Development
 

@@ -1,18 +1,17 @@
 {
-  "name": "@ds.ee/core",
+  "name": "@ds.ui/core",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "build": "yarn lerna run build",
-    "dev": "yarn lerna run dev",
-    "test": "yarn lerna run test",
-    "publish": "yarn test && yarn build && yarn lerna publish",
+    "build": "yarn workspace @ds.ui/foundation build && yarn workspace @ds.ui/scss build && yarn workspace @ds.ui/react build",
+    "dev": "concurrently -n foundation,scss,react,playground \"yarn workspace @ds.ui/foundation dev\" \"yarn workspace @ds.ui/scss dev\" \"yarn workspace @ds.ui/react dev\" \"yarn workspace @ds.ui/playground-react dev\"",
+    "test": "yarn workspace @ds.ui/foundation test && yarn workspace @ds.ui/react test",
     "commit": "yarn git-cz",
     "prepare": "husky",
-    "storybook": "yarn lerna run storybook",
-    "test:chromatic": "yarn lerna run test:chromatic",
-    "build-storybook": "yarn build && yarn lerna run build-storybook",
+    "storybook": "concurrently -n scss,storybook \"yarn workspace @ds.ui/scss dev\" \"yarn workspace @ds.ui/react storybook\"",
+    "test:chromatic": "yarn workspace @ds.ui/react test:chromatic",
+    "build-storybook": "yarn build && yarn workspace @ds.ui/react build-storybook",
     "chromatic": "npx chromatic --project-token=chpt_57c78762a08fb47"
   },
   "keywords": [],
@@ -22,9 +21,9 @@
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "commitizen": "^4.3.0",
+    "concurrently": "^10.0.6",
     "cz-conventional-changelog": "^3.3.0",
-    "husky": "^9.0.11",
-    "lerna": "^8.1.2"
+    "husky": "^9.0.11"
   },
   "workspaces": {
     "packages": [

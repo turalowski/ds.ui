@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProps> = ({
   children,
   ...rest
 }) => {
-  const buttonClassName = `dse-button dse-button-${variant} ${className}`.trim();
+  const buttonClassName = `ds-button ds-button-${variant} ${className}`.trim();
 
   return (
     <button 
